@@ -1,13 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ListasEnlazadas;
+
+import java.util.Scanner;
 
 /**
  *
- * @author EDUARDO
+ * @author Jorge Ivan Vasquez Sosa (0901-16-4067)
+ * Ultima fecha de modificacion: 26/03/2019
  */
 public class ListasEnlazadas
 {
@@ -16,6 +15,7 @@ public class ListasEnlazadas
 	{
 		Primero=null;
 	}
+        //Revisa si la primera casilla esta vacia
 	public boolean vacia()
 	{
 		if (Primero==null)
@@ -63,6 +63,7 @@ public class ListasEnlazadas
 		Nodo anterior=Primero;
 		Nodo actual=Primero;
 		int k=0;
+                
 		if (pos>0)
 		{
 			while (k!=pos && actual.Siguiente != null)
@@ -75,5 +76,27 @@ public class ListasEnlazadas
 			anterior.Siguiente=actual.Siguiente;
 		}
 	}
+public void BuscarPosicion(){
+    Scanner entrada = new Scanner (System.in);
+                Nodo anterior=Primero;
+		Nodo actual=Primero;
+		int k=0;
+                int pos;
+                System.out.println("Ingrese la posicion que desea buscar: ");
+                pos =entrada.nextInt();
+		if (pos>=0)
+		{
+			while (k!=pos && actual.Siguiente != null)
+			{
+				anterior=actual;
+				actual=actual.Siguiente;
+				k++;
+				
+			}
+			System.out.println("K       "+pos+" :"+actual.info);
+		}
 
 }
+
+}
+

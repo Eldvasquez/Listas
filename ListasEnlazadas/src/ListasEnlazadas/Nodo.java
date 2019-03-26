@@ -7,9 +7,10 @@ package ListasEnlazadas;
 
 /**
  *
- * @author EDUARDO
+ * @author Jorge Ivan Vasquez Sosa (0901-16-4067)
+ * Ultima fecha de modificacion: 26/03/2019
  */
-public class Nodo 
+public class Nodo // creamos un nodo
 {
     	int info;
 	public Nodo Siguiente;
@@ -17,7 +18,7 @@ public class Nodo
 	{
 		info=dato;
 	}
-	public void verNodo()
+	public void verNodo() //ver nodo
 	{
 		System.out.print("(  "+info+" )");
 	}
